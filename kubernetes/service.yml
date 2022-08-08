@@ -5,7 +5,6 @@ metadata:
     app: issuegen
     argocd.argoproj.io/instance: issuegen
   name: issuegen-svc
-  namespace: issuegen
 spec:
   ports:
     - port: 3100
