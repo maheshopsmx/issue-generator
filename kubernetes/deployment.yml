@@ -3,7 +3,6 @@ kind: Deployment
 metadata:
   labels:
     app: issuegen
-    argocd.argoproj.io/instance: issuegen
   name: issuegen
 spec:
   selector:
@@ -13,6 +12,7 @@ spec:
     metadata:
       labels:
         app: issuegen
+        code: blue
     spec:
       containers:
         - image: 'docker.io/opsmxdev/issuegen:v3.0.6'
