@@ -5,7 +5,6 @@ metadata:
     app: issuegen
     argocd.argoproj.io/instance: issuegen
   name: issuegen
-  namespace: issuegen
 spec:
   selector:
     matchLabels:
