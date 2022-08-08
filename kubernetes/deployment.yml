@@ -12,7 +12,6 @@ spec:
     metadata:
       labels:
         app: issuegen
-        code: red
     spec:
       containers:
         - image: 'docker.io/opsmxdev/issuegen:v3.0.6'
