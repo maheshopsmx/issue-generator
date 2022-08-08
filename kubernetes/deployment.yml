@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: issuegen
+    argocd.argoproj.io/instance: issuegen
+  name: issuegen
+  namespace: issuegen
+spec:
+  selector:
+    matchLabels:
+      app: issuegen
+  template:
+    metadata:
+      labels:
+        app: issuegen
+    spec:
+      containers:
+        - image: 'docker.io/opsmxdev/issuegen:v3.0.6'
+          name: issuegen
+          ports:
+            - containerPort: 8088
