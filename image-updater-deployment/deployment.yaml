@@ -17,8 +17,15 @@ spec:
       containers:
       - name: alpine
         image: alpine:latest
+        args:
+          - >-
+            #Install jq CLI on Alpine
+
+            echo You deployed
+
+            sleep 5s
         command:
-           - /bin/sh
-           - -c
-           - "sleep 10m"
+            - /bin/sh
+            - +x
+            - '-c'
 
